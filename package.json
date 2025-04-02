@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm-run-all -p dev:*",
     "dev:server": "tsx --no-check --watch src/index.ts",
     "dev:client": "tsc --watch --project tsconfig.client.json",
-    "dev:sass": "sass --watch public"
+    "dev:sass": "sass --watch public",
+    "build": "npm-run-all build:*",
+    "build:server": "tsx --no-check src/index.ts",
+    "build:client": "tsc --project tsconfig.client.json",
+    "build:sass": "sass public"
   },
   "keywords": [],
   "author": "",
