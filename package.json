@@ -4,14 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm-run-all -p dev:*",
-    "dev:server": "tsx --no-check --watch src/index.ts",
+    "dev:server": "vercel dev",
     "dev:client": "tsc --watch --project tsconfig.client.json --noCheck",
     "dev:sass": "sass --watch public",
     "build": "npm-run-all build:*",
-    "build:server": "tsc --noCheck src/index.ts",
     "build:client": "tsc --project tsconfig.client.json --noCheck",
     "build:sass": "sass public"
   },
