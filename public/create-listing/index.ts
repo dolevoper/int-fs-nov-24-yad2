@@ -15,7 +15,7 @@ document.forms.namedItem("create listing")?.addEventListener("submit", async (e)
         .querySelectorAll("input, textarea, button")
         .forEach((element) => element.setAttribute("disabled", "true"));
 
-    await fetch(`/api/listings/${crypto.randomUUID().replaceAll("-", "").slice(0, 24)}`, {
+    await fetch(`/api/listings/${crypto.randomUUID().replace(/-/g, "").slice(0, 24)}`, {
         method: "put",
         body,
         headers: {
