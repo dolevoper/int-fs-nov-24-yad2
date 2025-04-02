@@ -11,8 +11,8 @@
     "dev:client": "tsc --watch --project tsconfig.client.json",
     "dev:sass": "sass --watch public",
     "build": "npm-run-all build:*",
-    "build:server": "tsx --no-check src/index.ts",
-    "build:client": "tsc --project tsconfig.client.json",
+    "build:server": "tsc --noChek src/index.ts",
+    "build:client": "tsc --project tsconfig.client.json --noCheck",
     "build:sass": "sass public"
   },
   "keywords": [],
